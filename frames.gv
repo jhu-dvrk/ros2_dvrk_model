@@ -1,0 +1,7 @@
+digraph G {
+"PSM1_base" -> "PSM1"[label=" Broadcaster: default_authority\nAverage rate: 50.029\nBuffer length: 5.017\nMost recent transform: 1648742048.306509\nOldest transform: 1648742043.289402\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1648742048.3147094"[ shape=plaintext ] ;
+}->"PSM1_base";
+}
