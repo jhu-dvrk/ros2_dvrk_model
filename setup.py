@@ -14,6 +14,7 @@ setup(
         ('share/' + package_name, ['package.xml']),
         (os.path.join('share', package_name), glob('launch/*.py')),
         (os.path.join('share', package_name, 'model'), glob('model/*')),
+        (os.path.join('share', package_name, 'rviz'), glob('rviz/*.rviz')),
         (os.path.join('share', package_name, 'meshes'), glob('meshes/*.stl')),
         (os.path.join('share', package_name, 'meshes/psm'), glob('meshes/psm/*.*')),
         (os.path.join('share', package_name, 'meshes/ecm'), glob('meshes/ecm/*.*')),
@@ -24,9 +25,5 @@ setup(
     maintainer='Laura Connolly',
     maintainer_email='15lpc1@queensu.ca',
     description='URDF and STL files for Sensable Omni',
-    license='MIT',
-    entry_points={
-        'console_scripts': [ 'joint_state_publisher = dvrk_model.joint_state_publisher:main'
-        ],
-    },
+    license='MIT'
 )
