@@ -21,9 +21,10 @@ def generate_launch_description():
         package='joint_state_publisher',
         executable='joint_state_publisher',
         name='joint_state_publisher',
+        namespace='PSM1',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time,
-                     'source_list': ['/PSM1/measured_js', '/PSM1/jaw/measured_js'],
+                     'source_list': ['measured_js', 'jaw/measured_js'],
                      'rate': rate
         }]
     )
@@ -32,6 +33,7 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         name='robot_state_publisher',
+        namespace='PSM1',
         output='screen',
         parameters=[{'use_sim_time': use_sim_time,
                      'robot_description': ParameterValue(
