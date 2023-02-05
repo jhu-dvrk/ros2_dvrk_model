@@ -25,6 +25,13 @@
           <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link.stl"/>
         </geometry>
       </visual>
+      <collision>
+        <!-- <origin rpy="0 3.1416 0" xyz="0 0 0"/> -->
+        <origin rpy="1.5708 3.1416 0" xyz="0.0051 0.0032 0"/>
+        <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link.stl"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- joint 6: Outer wrist yaw joint -->
@@ -45,6 +52,12 @@
           <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_shaft_link.stl"/>
         </geometry>
       </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 -0.0002 -0.0025"/>
+        <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_shaft_link.stl"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- joint 7-0: Outer open angle 1  -->
@@ -64,6 +77,12 @@
           <box size="0 0 0" />
         </geometry>
       </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <box size="0 0 0" />
+        </geometry>
+      </collision>
     </link>
 
     <!-- joint 7-1: Outer open angle 1  -->
@@ -84,6 +103,12 @@
           <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link_2.stl"/>
         </geometry>
       </visual>
+      <collision>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link_2.stl"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- joint 7-2: Outer open angle 2   -->
@@ -104,6 +129,12 @@
           <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link_2.stl"/>
         </geometry>
       </visual>
+      <collision>
+        <origin rpy="0 3.1516 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/tool_wrist_sca_link_2.stl"/>
+        </geometry>
+      </collision>
     </link>
 
     <!-- tool tip -->
