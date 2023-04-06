@@ -14,6 +14,7 @@ setuptools.setup(
         (os.path.join('share', package_name), glob.glob('launch/*.py')),
         (os.path.join('share', package_name, 'model'), glob.glob('model/*')),
         (os.path.join('share', package_name, 'rviz'), glob.glob('rviz/*.rviz')),
+	(os.path.join('share', package_name, 'ros2_control'), glob.glob('ros2_control/*.*')),
         (os.path.join('share', package_name, 'meshes'), glob.glob('meshes/*.stl')),
         (os.path.join('share', package_name, 'meshes/psm'), glob.glob('meshes/psm/*.*')),
         (os.path.join('share', package_name, 'meshes/ecm'), glob.glob('meshes/ecm/*.*')),
