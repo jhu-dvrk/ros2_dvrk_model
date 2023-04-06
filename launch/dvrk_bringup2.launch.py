@@ -97,7 +97,7 @@ def generate_launch_description():
 
     robot_controllers = PathJoinSubstitution(
         [
-            FindPackageShare("dvrk_bringup"),
+            FindPackageShare("dvrk_model"),
             "config",
             controllers_file
         ]
@@ -105,12 +105,7 @@ def generate_launch_description():
 
     rviz_config_file = PathJoinSubstitution(
         [FindPackageShare(description_package), "rviz", "PSM1.rviz"]
-    )
-    
-    console_path = PathJoinSubstitution(
-        #[FindPackageShare("dvrk_bringup"),"/..","/sawIntuitiveResearchKitAll","/share","/sawIntuitiveResearchKit","share","/console", "/console-PSM1_KIN_SIMULATED.json"]
-        ["~/ros2_ws/install","/sawIntuitiveResearchKitAll","/share","/sawIntuitiveResearchKit","/share","/console", "/console-PSM1_KIN_SIMULATED.json"]
-    )     
+    )   
     
     #############################
     #Defining Nodes from here on.
