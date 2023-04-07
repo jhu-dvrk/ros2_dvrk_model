@@ -23,5 +23,7 @@ dvrk_trajectory_controller:
 
     state_interfaces:
       - position
-      # - velocity
-      # - acceleration
+
+    allow_partial_joints_goal: false
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true

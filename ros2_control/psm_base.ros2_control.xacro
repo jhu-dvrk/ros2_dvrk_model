@@ -5,7 +5,6 @@
         <ros2_control name="${name}_ros2_control" type="system">
             <hardware>
                 <plugin>crtk_ros2_hw/crtkROSHardwareInterface</plugin>
-                <!-- <plugin>fake_components/GenericSystem</plugin> -->
             </hardware>
 
             <joint name="outer_yaw">
@@ -13,13 +12,8 @@
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/> -->
             </joint>
 
             <joint name="outer_pitch">
@@ -27,13 +21,8 @@
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/> -->
             </joint>
 
             <joint name="outer_insertion">
@@ -41,13 +30,8 @@
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/> -->
             </joint>
 
             <joint name="outer_roll">
@@ -55,39 +39,24 @@
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/>                -->
             </joint>
             <joint name="outer_wrist_pitch">
                 <command_interface name="position">
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/>                -->
             </joint>
             <joint name="outer_wrist_roll">
                 <command_interface name="position">
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>
                 </command_interface>
-                <!-- <command_interface name="velocity">
-                <param name="min">-0.4</param>
-                <param name="max"> 0.4</param>
-                </command_interface> -->
                 <state_interface name="position"/>
                 <!-- <state_interface name="velocity"/> -->
-                <!-- <state_interface name="acceleration"/>                -->
             </joint>          
         </ros2_control>
     </xacro:macro>

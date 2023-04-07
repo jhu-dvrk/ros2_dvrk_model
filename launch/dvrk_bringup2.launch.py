@@ -97,7 +97,7 @@ def generate_launch_description():
 
     robot_controllers = PathJoinSubstitution(
         [
-            FindPackageShare("dvrk_model"),
+            FindPackageShare(description_package),
             "config",
             controllers_file
         ]
@@ -141,7 +141,6 @@ def generate_launch_description():
 
     control_node = Node(
         package="controller_manager",
-        # namespace=arm_name,
         executable="ros2_control_node",
         parameters=[robot_description, robot_controllers],
         output={
@@ -154,7 +153,6 @@ def generate_launch_description():
 
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
-        # namespace=arm_name,
         executable="spawner",
         arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
         # prefix=['xterm -e gdb -ex run --args']
@@ -163,7 +161,6 @@ def generate_launch_description():
 
     robot_controller_spawner = Node(
         package="controller_manager",
-        # namespace=arm_name,
         executable="spawner",
         arguments=[robot_controller,"--controller-manager",  "/controller_manager"],
     )
@@ -195,9 +192,10 @@ def generate_launch_description():
             console_node,
             joint_state_publisher_node,
             robot_state_publisher_node,
+            rviz_node,
             control_node,
             joint_state_broadcaster_spawner,
-            delay_rviz_after_joint_state_broadcaster_spawner,
+            # delay_rviz_after_joint_state_broadcaster_spawner,
             delay_robot_controller_spawner_after_joint_state_broadcaster_spawner
             ]
     return LaunchDescription(declared_arguments+nodes)
