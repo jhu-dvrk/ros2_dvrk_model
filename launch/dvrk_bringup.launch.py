@@ -117,6 +117,7 @@ def generate_launch_description():
         output="screen",
         arguments=["-j","/home/dvrk/ros2_ws/install/sawIntuitiveResearchKitAll/share/sawIntuitiveResearchKit/share/console/console-PSM1_KIN_SIMULATED.json"],
     )  
+    # CHANGE THE PATH HERE TO THE JSON FILE
 
     joint_state_publisher_node = Node(
     package = 'joint_state_publisher',
