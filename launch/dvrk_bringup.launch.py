@@ -106,6 +106,9 @@ def generate_launch_description():
     rviz_config_file = PathJoinSubstitution(
         [FindPackageShare(description_package), "rviz", "PSM1.rviz"]
     )   
+    console_file = PathJoinSubstitution(
+        [FindPackageShare(description_package), "../../../sawIntuitiveResearchKitAll","share/sawIntuitiveResearchKit/share/console/console-PSM1_KIN_SIMULATED.json"]
+    )   
     
     #############################
     #Defining Nodes from here on.
@@ -115,7 +118,7 @@ def generate_launch_description():
         executable="dvrk_console_json",
         name="dvrk_console",
         output="screen",
-        arguments=["-j","/home/dvrk/ros2_ws/install/sawIntuitiveResearchKitAll/share/sawIntuitiveResearchKit/share/console/console-PSM1_KIN_SIMULATED.json"],
+        arguments=["-j",console_file]
     )  
     # CHANGE THE PATH HERE TO THE JSON FILE
 
