@@ -4,7 +4,7 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 from launch import LaunchContext, LaunchDescription, Substitution
 from typing import Text
-from launch.conditions import IfCondition 
+
 
 from launch.substitutions import (
     Command,
@@ -69,7 +69,6 @@ def generate_launch_description():
         parameters = [{'use_sim_time': use_sim_time,
                        'source_list': ArmSourceListSubstitution(arm_name),
                        'rate': rate}],
-        #condition = IfCondition(start_joint_state_publisher),
     )
 
     robot_state_publisher_node = Node(
