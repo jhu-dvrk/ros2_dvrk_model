@@ -1,0 +1,30 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    dvrk_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+dvrk_trajectory_controller:
+  ros__parameters:
+    joints:
+      - outer_yaw
+      - outer_pitch
+      - outer_insertion
+      - outer_roll
+      - outer_wrist_pitch
+      - outer_wrist_roll
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    allow_partial_joints_goal: false
+    open_loop_control: true
+    allow_integration_in_goal_trajectories: true

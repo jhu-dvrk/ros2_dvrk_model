@@ -3,8 +3,8 @@ from launch_ros.substitutions import FindPackageShare
 from launch_ros.parameter_descriptions import ParameterValue
 
 from launch import LaunchContext, LaunchDescription, Substitution
-
 from typing import Text
+
 
 from launch.substitutions import (
     Command,
@@ -43,6 +43,7 @@ def generate_launch_description():
     arm_name = LaunchConfiguration('arm')
     use_sim_time = LaunchConfiguration('use_sim_time', default = 'false')
     rate = LaunchConfiguration('rate', default = 50.0)  # Hz, default is 10 so we're increasing that a bit.  Funny enough joint and robot state publishers don't have the same name for that parameter :-(
+    #start_joint_state_publisher=LaunchConfiguration('start_joint_state_publisher',default='true')
 
     robot_model_default = [
         PathJoinSubstitution([FindPackageShare('dvrk_model'), 'model', '']),
@@ -78,11 +79,12 @@ def generate_launch_description():
         parameters = [{'use_sim_time': use_sim_time,
                        'robot_description': robot_description,
                        'publish_frequency': rate}],
+        output="both",
     )
 
-    return LaunchDescription(
-        [
-            joint_state_publisher_node,
-            robot_state_publisher_node,
-        ]
-    )
+    ld = LaunchDescription([
+                joint_state_publisher_node,
+                robot_state_publisher_node,
+            ])
+
+    return ld
