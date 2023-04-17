@@ -50,7 +50,7 @@
                 <state_interface name="position"/>
                 <state_interface name="velocity"/>
             </joint>
-            <joint name="outer_wrist_roll">
+            <joint name="outer_wrist_yaw">
                 <command_interface name="position">
                 <param name="min">-1.5707</param>
                 <param name="max"> 1.5707</param>

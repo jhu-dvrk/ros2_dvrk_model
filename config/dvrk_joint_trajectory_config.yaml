@@ -16,7 +16,7 @@ dvrk_trajectory_controller:
       - outer_insertion
       - outer_roll
       - outer_wrist_pitch
-      - outer_wrist_roll
+      - outer_wrist_yaw
 
     command_interfaces:
       - position
