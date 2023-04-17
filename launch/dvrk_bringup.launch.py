@@ -113,13 +113,13 @@ def generate_launch_description():
     #############################
     #Defining Nodes from here on.
     
-    console_node=Node(
-        package="dvrk_robot",
-        executable="dvrk_console_json",
-        name="dvrk_console",
-        output="screen",
-        arguments=["-j",console_file]
-    )  
+    #console_node=Node(
+    #    package="dvrk_robot",
+    #    executable="dvrk_console_json",
+    #    name="dvrk_console",
+    #    output="screen",
+    #    arguments=["-j",console_file]
+    #)  
     # CHANGE THE PATH HERE TO THE JSON FILE
 
     joint_state_publisher_node = Node(
@@ -193,10 +193,10 @@ def generate_launch_description():
     )
 
     nodes =[
-            console_node,
+            #console_node,
             joint_state_publisher_node,
             robot_state_publisher_node,
-            rviz_node,
+            #rviz_node,
             control_node,
             joint_state_broadcaster_spawner,
             delay_robot_controller_spawner_after_joint_state_broadcaster_spawner
