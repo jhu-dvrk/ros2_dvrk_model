@@ -5,6 +5,8 @@
   <xacro:include filename="$(find dvrk_model)/model/psm.base.urdf.xacro"/>
   <xacro:include filename="$(find dvrk_model)/model/psm.tool.sca.urdf.xacro"/>
   <xacro:include filename="$(find dvrk_model)/model/psm.tool.caudier.urdf.xacro"/>
+  <xacro:include filename="$(find dvrk_model)/model/psm.tool.caudier.blade.urdf.xacro"/>
+  <xacro:include filename="$(find dvrk_model)/model/psm.tool.sca.blade.urdf.xacro"/>
   <xacro:include filename="$(find dvrk_model)/model/psm.tool.snake.urdf.xacro"/>
 
   <!-- Macro for psm with snake -->
@@ -28,6 +30,25 @@
         prefix="${prefix}"/>
   </xacro:macro>
 
+  <!-- Macro for psm with sca -->
+  <xacro:macro name="psm_sca_blade" params="prefix parent_link xyz rpy">
+    <xacro:psm
+        prefix="${prefix}"
+        parent_link="${parent_link}"
+        xyz="${xyz}" rpy="${rpy}"/>
+    <xacro:psm_tool_sca_blade
+        prefix="${prefix}"/>
+  </xacro:macro>
+
+  <xacro:macro name="psm_caudier_blade" params="prefix parent_link xyz rpy">
+    <xacro:psm
+        prefix="${prefix}"
+        parent_link="${parent_link}"
+        xyz="${xyz}" rpy="${rpy}"/>
+    <xacro:psm_tool_caudier_blade
+        prefix="${prefix}"/>
+  </xacro:macro>
+
 
   <!-- Macro for psm with caudier -->
   <xacro:macro name="psm_caudier" params="prefix parent_link xyz rpy">
@@ -38,5 +59,4 @@
     <xacro:psm_tool_caudier
         prefix="${prefix}"/>
   </xacro:macro>
-
 </robot>
