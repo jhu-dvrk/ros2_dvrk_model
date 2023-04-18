@@ -33,7 +33,7 @@
     <joint name="outer_wrist_yaw" type="revolute">
       <parent link="${prefix}tool_wrist_caudier_link"/>
       <child link="${prefix}tool_wrist_caudier_shaft_link"/>
-      <axis xyz="0 0 -1"/>
+      <axis xyz="0 0 1"/>
       <origin rpy="0.00 -1.5708 -1.5708" xyz="0.0091 0 0"/>
       <limit lower="-1.39268" upper="1.39268" velocity=".4" effort="1000"/>
     </joint>
@@ -90,9 +90,9 @@
 
     <!-- tool tip   -->
     <joint name="tool_wrist_caudier_ee" type="fixed">
-      <parent link="${prefix}tool_wrist_caudier_ee_link_0"/>
+      <parent link="${prefix}tool_wrist_caudier_shaft_link"/>
       <child link="${prefix}tool_tip_link"/>      
-      <origin rpy="0 0 0" xyz="0 0.045 0"/>      
+      <origin rpy="-1.5708 0 0" xyz="0 0.045 0.0025"/>      
     </joint>
 
     <!-- link 6-3:  -->
