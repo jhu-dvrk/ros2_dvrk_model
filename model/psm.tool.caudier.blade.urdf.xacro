@@ -68,12 +68,20 @@
     <link name="${prefix}tool_wrist_caudier_ee_link_0">
       <visual>
         <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/>
+        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/> -->
         <geometry>
           <box size="0.005 0.045 0.001" />
         </geometry>
+        <!-- <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/knife.stl"/>
+        </geometry> -->
       </visual>
       <collision>
         <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/>
+        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/> -->
+        <!-- <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/knife.stl"/>
+        </geometry> -->
         <geometry>
           <box size="0.005  0.045 0.001" />
         </geometry>

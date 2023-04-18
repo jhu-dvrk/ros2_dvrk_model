@@ -211,7 +211,7 @@
       <child link="${prefix}tool_wrist_link"/>
       <axis xyz="0 0 1"/>
       <origin rpy="0 0 0" xyz="0 0 0.4162"/>
-      <limit lower="-2.2689" upper="2.2689" velocity=".4" effort="1000"/>
+      <limit lower="-4.53786" upper="4.53786" velocity=".4" effort="1000"/>
     </joint>
 
     <!-- link 4: tool_wrist_link -->
