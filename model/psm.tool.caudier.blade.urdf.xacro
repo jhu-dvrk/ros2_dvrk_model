@@ -60,31 +60,31 @@
       <parent link="${prefix}tool_wrist_caudier_shaft_link"/>
       <child link="${prefix}tool_wrist_caudier_ee_link_0"/>      
       <!-- <axis xyz="0 1 0"/> -->
-      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <origin rpy="-1.5708 0 0" xyz="0 0 0"/>
       <!-- <limit lower="0" upper="1.5707" velocity=".4" effort="1000"/> -->
     </joint>
 
     <!-- link 7-0: Outer open angle virtual -->
     <link name="${prefix}tool_wrist_caudier_ee_link_0">
       <visual>
-        <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/>
-        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/> -->
-        <geometry>
-          <box size="0.005 0.045 0.001" />
-        </geometry>
+        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/> -->
+        <origin rpy="0 0 0" xyz="0 0 0"/>
         <!-- <geometry>
-          <mesh filename="package://dvrk_model/meshes/psm/knife.stl"/>
+          <box size="0.005 0.045 0.001" />
         </geometry> -->
+        <geometry>
+          <mesh filename="package://dvrk_model/meshes/psm/knife.STL"/>
+        </geometry>
       </visual>
       <collision>
-        <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/>
-        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/> -->
-        <!-- <geometry>
-          <mesh filename="package://dvrk_model/meshes/psm/knife.stl"/>
-        </geometry> -->
+        <!-- <origin rpy="0.0 0.0 0.0" xyz="0 0.0225 0"/> -->
+        <origin rpy="0 0 0" xyz="0 0 0"/>
         <geometry>
-          <box size="0.005  0.045 0.001" />
+          <mesh filename="package://dvrk_model/meshes/psm/knife.STL"/>
         </geometry>
+        <!-- <geometry>
+          <box size="0.005  0.045 0.001" />
+        </geometry> -->
       </collision>
     </link>
 
@@ -92,7 +92,7 @@
     <joint name="tool_wrist_caudier_ee" type="fixed">
       <parent link="${prefix}tool_wrist_caudier_ee_link_0"/>
       <child link="${prefix}tool_tip_link"/>      
-      <origin rpy="-1.5708 0.0 0.0" xyz="0 0.045 0"/>      
+      <origin rpy="0 0 0" xyz="0 0.045 0"/>      
     </joint>
 
     <!-- link 6-3:  -->
