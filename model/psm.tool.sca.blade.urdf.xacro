@@ -10,7 +10,7 @@
       <child link="${prefix}tool_wrist_sca_link"/>
       <axis xyz="0 0 1"/>
       <origin rpy="-1.5708 -1.5708 0" xyz="0 0 0"/>
-      <limit lower="-1.5707" upper="1.5707" velocity=".4" effort="1000"/>
+      <limit lower="-1.39268" upper="1.39268" velocity=".4" effort="1000"/>
     </joint>
 
     <!-- link 5: tool_wrist_sca_link -->
@@ -38,7 +38,7 @@
       <axis xyz="0 0 1"/>
       <origin rpy="-1.5708 -1.5708 0" xyz="0.0091 0 0"/>
       <!-- +/- 80 deg -->
-      <limit lower="-1.3963" upper="1.3963" velocity=".4" effort="1000"/>
+      <limit lower="-1.39268" upper="1.39268" velocity=".4" effort="1000"/>
     </joint>
 
     <!-- link 6: tool_wrist_sca_shaft_link -->
