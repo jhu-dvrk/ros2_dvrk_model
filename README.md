@@ -20,7 +20,14 @@ It provides launch files to bringup with the robot with a controller using the r
 2. Run the following in the workspace:
 ```sh
 colcon build --packages-select dvrk_model
+# don't forget to source after first compilation
+source install/setup.bash
+# launch script with robot state publisher and our python script to animate the Omni
+ros2 launch dvrk_mode dvrk_state_publisher.launch.py
+# to visualize the Omni in rviz...
+rviz2 -d ~/<workspace_name>/install/dvrk_model/share/dvrk_model/dvrk.rviz # to launch rviz with the omni frames
 ```
+
 
 #  Requirements
 
@@ -28,13 +35,4 @@ xacro is not installed by default on ROS 2 (at least with Galactic):
 
 ```sh
 sudo apt install ros-galactic-xacro
-```
-
-```sh
-# don't forget to source after first compilation
-source install/setup.bash
-# launch script with robot state publisher and our python script to animate the Omni
-ros2 launch dvrk_mode dvrk_state_publisher.launch.py
-# to visualize the Omni in rviz...
-rviz2 -d ~/<workspace_name>/install/dvrk_model/share/dvrk_model/dvrk.rviz # to launch rviz with the omni frames
 ```
