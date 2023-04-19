@@ -5,6 +5,7 @@ description as a parameter. It is based on this tutorial:
 https://docs.ros.org/en/galactic/Tutorials/URDF/Using-URDF-with-Robot-State-Publisher.html
 
 It provides launch files to bringup with the robot with a controller using the ros_control package.
+
 =======
 # dVRK models
 
