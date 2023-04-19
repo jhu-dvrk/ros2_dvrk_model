@@ -25,6 +25,11 @@ colcon build --packages-select dvrk_model
 #  Requirements
 
 xacro is not installed by default on ROS 2 (at least with Galactic):
+
+```sh
+sudo apt install ros-galactic-xacro
+```
+
 ```sh
 # don't forget to source after first compilation
 source install/setup.bash
@@ -32,6 +37,4 @@ source install/setup.bash
 ros2 launch dvrk_mode dvrk_state_publisher.launch.py
 # to visualize the Omni in rviz...
 rviz2 -d ~/<workspace_name>/install/dvrk_model/share/dvrk_model/dvrk.rviz # to launch rviz with the omni frames
-=======
-sudo apt install ros-galactic-xacro
 ```
