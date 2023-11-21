@@ -2,9 +2,9 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>dvrk_model</name>
-  <version>0.0.0</version>
-  <description>URDF and STL files for Sensable Omni</description>
-  <maintainer email="15lpc1@queensu.ca">Laura Connolly</maintainer>
+  <version>2.2.0</version>
+  <description>URDF and STL files for the dVRK</description>
+  <maintainer email="anton.deguet@jhu.edu">Anton Deguet</maintainer>
   <license>MIT</license>
 
   <depend>rclpy</depend>
